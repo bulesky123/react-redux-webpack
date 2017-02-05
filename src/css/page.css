@@ -1,0 +1,43 @@
+
+.table-bordered tr{
+    border: 1px solid #dedfe0;
+    text-align: center;
+}
+.table-bordered {
+    width:100%;
+    height:100%;
+    color: #303030;
+    font-size:15px;
+    border-collapse:collapse;
+    border-spacing:0;
+}
+.table-bordered th{
+    height: 45px;
+    border: 1px solid #dedfe0;
+    text-align: center;
+    color:#fff;
+    background:#46596a;
+}
+.table-bordered td{
+    height: 45px;
+    border: 1px solid #dedfe0;
+    text-align: center;
+}
+.table-bordered tr:nth-child(2n){
+    background:#f0f3f8;
+}
+.leftDiv{float:left;width:45%;text-align:left;}
+.rightDiv{float: right;text-align:right;margin-top: 1px;width:55%;font-size:12px;}
+.paginationDiv {border-top:1px solid #8cb2e2;border-bottom:1px solid #8cb2e2;overflow: auto;background:#f0f3f8;display: block; color: #535353; line-height: 29px; text-align: center;width:100%;font-size:15px;}
+.paginationDiv a {text-align:center;float: left; width: 5%; vertical-align: middle; text-decoration: none; cursor: pointer;}
+.paginationDiv .next,.paginationDiv .prev {text-align:center;width: 23px;background-color: #f3f4f8; border: 1px solid #e5e5e5;}
+.paginationDiv .next:hover,.paginationDiv .prev:hover {background-color: #ddd; border: 1px solid #ddd;}
+.paginationDiv .next:before,.paginationDiv .prev:before {content: '<'; font-size: 14px }
+.paginationDiv .disable.next,.paginationDiv .prev.disable {background-color: #f3f4f8; border-color: #e5e5e5; cursor: no-drop;}
+.paginationDiv .disable.next:before,.paginationDiv .prev.disable:before {color: #a0a0a0;border-color: #337ab7 }
+.paginationDiv .next:before {content: '>'}
+.paginationDiv .num {margin-left: -1px; padding: 0 7px; border: 1px solid #e5e5e5; color: #707070 }
+.paginationDiv .num.current{background-color: #337ab7; border-color: #337ab7; color: #fff }
+.paginationDiv .num:hover {background-color: #ddd; border-color: #ddd; color: #1a1a1a }
+.paginationDiv .ellipsis {width: 10%; height: 30px; color: #707070; line-height: 30px }
+.paginationDiv input {width: 44px; height: 24px; border: 1px solid #eee; text-align: center;border-bottom:1px solid #ccc;}
