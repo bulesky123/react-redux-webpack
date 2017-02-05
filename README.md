@@ -5,10 +5,10 @@
   ├── src                         # 程序源文件   
   │   ├── app.js                 # 入口文件（路由配置文件）   
   │   ├── components             # 全局可复用的表现组件   
-  │   ├── views                # 所有页面的文件    
-  │   ├── assets               # 资源   
-  │   │   ├── css             # css   
-  │   │   └── mockCtrl        # 所有ajax请求的数据   
+  │   ├── views                  # 所有页面的文件    
+  │   ├── css                    # 样式   
+  │   │──img
+  │   │──redux   
   ├── index.html                #主体html文件    
   ├── app.js                    #启动服务器文件    
   ├── webpack.config.js         #webpack配置文件
