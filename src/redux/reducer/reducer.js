@@ -1,34 +1,18 @@
 /**
  * Created by zhoufei on 2017/1/31.
  */
-import Immutable from 'immutable';
-import { REQUEST_POSTS,RECEIVE_POSTS,GET_DATA_START ,GET_DATA_SUCCESS} from '../action/action';
+import { combineReducers } from 'redux'
+import {fetchData} from './index_reducer'
+import {requestData} from './surename_reducer'
+//连接reducers
+//Redux提供的combineReducers函数可以帮助我们把reducer组合在一起，
+// 这样我们就可以把Reducers拆分成一个个小的Reducer来管理Store了
+const rootReducer = combineReducers({
+    fetchData,
+    requestData
+});
+export default rootReducer
 
-const defaultlState = Immutable.fromJS({data: {}, isFetching: false});
-//首次渲染时获取数据
-export const fetchData = (state = defaultlState , action = {}) => {
-    switch(action.type){
-        case REQUEST_POSTS:
-            return state.set('isFetching',true);
-        case RECEIVE_POSTS:
-            return Immutable.Map({'data':action.json,'isFetching':false});//返回一个新的state
-        default:
-            return state
-    }
-};
 
-//手动获取数据
-export const requestData = (state = {}, action = {}) => {
-    switch(action.type){
-        case GET_DATA_START:
-            return state;
-        case GET_DATA_SUCCESS:
-            action.success(action.json);
-            state[action.name] = action.json;
-            return state;
-        default:
-            return state;
-    }
-};
 
 
